@@ -6,5 +6,10 @@ pipeline{
 				git 'https://github.com/anilkumar1024/hello-world.git'
 			}
 		}
+		stage("Maven build"){
+			steps{
+				sh "mvn clean package"
+			}
+		}
 	}
 }
